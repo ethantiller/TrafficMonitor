@@ -26,7 +26,6 @@ def chatBotResponse(prompt):
         model="gemini-2.0-flash", contents=prompt, max_tokens=50)
     usage_counter += 1
     return response.text
-  
 
 def main():
     print("Welcome to the OpenAI Chatbot! Type 'exit' to end the conversation.")
