@@ -20,5 +20,6 @@ def test_json_string():
     # Return the hardcoded example data as a JSON response
     return jsonify(example_data)
 
+
 if __name__ == '__main__':
-    app.run(host="127.1.1.1", port=5500, debug=True)
+    app.run(host="127.0.0.1", port=5500, debug=True)
