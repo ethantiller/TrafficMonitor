@@ -1,17 +1,30 @@
 
-
 *{
     margin: 0;
     font-family: Comic Sans MS; /* changed Font */
 } 
 
 
+.splitscreen{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.sleft{
+    grid-column: 1;
+  }
+
+  .sright{
+    grid-column: 2;
+  }
+
 .header{
     color: black;
     display: grid;
     place-items: center;
     background-color: #a8dadc;
-    height: 9vh;
+    height: 8vh;
   }
   
   
@@ -20,7 +33,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     place-items: center;
-    height: 6vh;
+    height: 7vh;
   }
 
 
@@ -30,8 +43,7 @@
     display: grid;
     place-items: center;
     background-color: #E6F7FF;
-    height: 6vh;
-    
+    height: 7vh;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -39,13 +51,6 @@
     place-items: center;
   }
 
-  .sleft{
-    grid-column: 1;
-  }
-
-  .sright{
-    grid-column: 2;
-  }
 
   
   .main{
