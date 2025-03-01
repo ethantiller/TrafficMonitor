@@ -1,0 +1,11 @@
+{
+    "var1": "happy",
+    "var2": "sad",
+    
+    "emotions": [
+      {
+        "var3": "mad"
+      }
+    ]
+  }
+  
