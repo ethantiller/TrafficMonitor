@@ -21,4 +21,5 @@ For the **2025 RevUC Hackathon**, we developed a **traffic and weather monitorin
 ## **How to Use**  
 1. **Clone the repository**
 2. **Install Requirements**
+3. **Run MainServer.py to interact with AI**
 
