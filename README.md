@@ -4,7 +4,7 @@
 Legit Company® is a team of passionate developers—**Ethan, Jason, and Nathan**—dedicated to creating innovative software solutions.  
 
 ## **Project Overview**  
-For the **2025 RevUC Hackathon**, we developed a **traffic monitoring website** that leverages **APIs, AI, and web development** to provide real-time insights into traffic conditions.  
+For the **2025 RevUC Hackathon**, we developed a **traffic and weather monitoring website** that leverages **APIs, AI, and web development** to provide real-time insights into traffic and weather conditions.  
 
 ### **Key Features**  
 - 🚀 **API Integration** – Seamlessly fetching and processing traffic data.  
@@ -14,10 +14,9 @@ For the **2025 RevUC Hackathon**, we developed a **traffic monitoring website** 
 
 ## **Technologies Used**  
 - **Frontend:** HTML, CSS, JavaScript 
-- **Backend:** Python
-- **AI:** Google Gemini API  
+- **Backend:** Python (Flask)
+- **AI:** Google Gemini API 
 - **Authentication:** OAuth 2.0  
-- **Deployment:** AWS, Vercel, or Firebase *(if applicable)*  
 
 ## **How to Use**  
 1. **Clone the repository**  
