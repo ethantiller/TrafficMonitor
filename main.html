@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE2Ame0Mqr9c6tivszJQ2nOqk22BuOulY&callback=initMap" async defer></script>
     <script src="main.js"> </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZmKNiPGUqEQxs3uovyiHUbTjzEKfRjKA&callback=initMap" defer></script>
 
     <title>Main Page</title>
 </head>
@@ -47,9 +47,10 @@
         
             <div class='mainright'>
                 <form class="input1"> 
-                    <input>
-                    <button> Enter </button>
+                    <input type="text" placeholder="Enter destination address" required>
+                    <button type="submit">Get Directions</button>
                 </form>
+                <div id="directions-panel"></div>
             </div>
             
             
