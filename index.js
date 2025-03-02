@@ -2,9 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const auth0 = new Auth0Client({
-      domain:  'dev-conofbnv2yt8x5si.us.auth0.com', // e.g., 'your-tenant.auth0.com'
-      client_id: 'Jo9UAn6KnrmD5w6WoLsOuksoFznJ0wgT',
-      redirect_uri: 'http://127.0.0.1:5500/main.html'
+      domain:  'dev-h2kl7dklje1ovh16.us.auth0.com', // e.g., 'your-tenant.auth0.com'
+      client_id: 'IZD9ObtBRNHd1IXlJY3avZqTkpB3Fs4r',
+      redirect_uri: 'https://revuc-2025.github.io/TrafficMonitor/main.html'
   });
 
   const loginButton = document.getElementById('loginButton');
