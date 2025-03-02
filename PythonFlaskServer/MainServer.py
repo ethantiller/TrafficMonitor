@@ -28,7 +28,7 @@ def get_chatbot_response():
     chatbot_response_prejson = ChatBotAPI.chatBotResponse(user_input_to_chat)
     
     # Convert the response to a plain string
-    chatbot_response_ready = chatbot_response_prejson['response']
+    chatbot_response_ready = chatbot_response_prejson
 
     # Generate a unique identifier for the response
     response_id = str(uuid.uuid4())
@@ -48,4 +48,4 @@ def fetch_chatbot_response():
     return Response(latest_chatbot_response, mimetype='text/plain')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
