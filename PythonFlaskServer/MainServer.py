@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import requests
 import uuid
 from AIChatbot import ChatBotAPI
 
 app = Flask(__name__)
+CORS(app)
 
 # Store the chatbot response
 chatbot_response_storage = {}

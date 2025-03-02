@@ -88,6 +88,131 @@
 }
 
 .input1{
+<<<<<<< HEAD
+  height: 40px;/* Add these to your existing CSS */
+.ai-section {
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+#aiForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#aiForm label {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+#aiForm input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #a8dadc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#aiForm input[type="text"]:focus {
+  outline: none;
+  border-color: #457b9d;
+  box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.1);
+}
+
+#aiForm button {
+  background-color: #457b9d;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#aiForm button:hover {
+  background-color: #2c3e50;
+  transform: translateY(-1px);
+}
+
+#response {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  min-height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Update existing input styles */
+.input1 {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input1 input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #a8dadc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input1 button {
+  background-color: #457b9d;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input1 button:hover {
+  background-color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .splitscreen {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sleft, .sright {
+    grid-column: auto;
+    padding: 0;
+  }
+
+  .mainleft, .mainright {
+    height: auto;
+    min-height: 50vh;
+    margin: 1rem;
+  }
+
+  .ai-section, .input1 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #aiForm button, .input1 button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+=======
   height: 40px;
 }
 
@@ -112,4 +237,5 @@
 .filler{
   height: 3px;
   background-color: #2c3e50;
+>>>>>>> 1e05f74bda9836b6d9e48ca9ab41223bc3c4f780
 }

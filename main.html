@@ -7,7 +7,6 @@
 
     <script src="main.js"> </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZmKNiPGUqEQxs3uovyiHUbTjzEKfRjKA&callback=initMap" defer></script>
-
     <title>Main Page</title>
 </head>
 <body>
@@ -49,12 +48,22 @@
                     <button type="submit">Get Directions</button>
                 </form>
                 <div id="directions-panel"></div>
+                <section class="ai-section">
+                    <form id="aiForm">
+                        <label for="prompt">Enter your prompt:</label>
+                        <input type="text" id="prompt" name="prompt" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="response"></div>
+                </section>
             </div>
             
             
         
         </div>
     </div>
+<<<<<<< HEAD
+=======
     
     <div class="filler">
 
@@ -68,6 +77,7 @@
         </div>
         
     </div>
+>>>>>>> 1e05f74bda9836b6d9e48ca9ab41223bc3c4f780
 
 </body>
 </html>
