@@ -15,11 +15,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"  # Replace with your Python version (e.g., 3.11)
+          python-version: "3.11"  # Replace with your Python version (e.g., 3.11)
 
       - name: Install dependencies
         run: |
-          cd PythonFlaskServer
+          # Install dependencies from root directory requirements.txt
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run MainServer.py
