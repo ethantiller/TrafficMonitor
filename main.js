@@ -10,6 +10,44 @@ function initMap() {
     });
 
     var trafficLayer = new google.maps.TrafficLayer();
+
+    const lightTheme = [
+        {
+            "featureType": "all",
+            "elementType": "geometry",
+            "stylers": [
+                { "color": "#f5f5f5" } // Light gray background
+            ]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                { "color": "#616161" } // Medium gray text
+            ]
+        },
+        {
+            "featureType": "poi",
+            "stylers": [
+                { "visibility": "off" } // Hide points of interest
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+                { "color": "#ffffff" } // White roads
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+                { "color": "#c9e9f6" } // Light blue water
+            ]
+        }
+    ];
+
     trafficLayer.setMap(map);
 
     // Try to get user's location
@@ -26,7 +64,9 @@ function initMap() {
 
                 // Add a marker at user's location
                 new google.maps.Marker({
+                    origin: userLocation,
                     position: userLocation,
+                    center: userLocation,
                     map: map,
                     title: "You are here"
                 });
