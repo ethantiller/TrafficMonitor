@@ -15,7 +15,7 @@ latest_chatbot_response = None
 @app.route('/userresponse', methods=['POST'])
 def get_user_response():
     website_to_user_input = request.json.get('user_input')
-    chatbot_url_and_endpoint = "http://127.0.0.1:5000/chatbotresponse"
+    chatbot_url_and_endpoint = "https://revuc-2025.github.io/TrafficMonitor/chatbotresponse"
     response = requests.post(chatbot_url_and_endpoint, json={'user_input': website_to_user_input})
     chatbot_response = response.text  # Get the response as plain text
     return Response(chatbot_response, mimetype='text/plain')
@@ -48,4 +48,13 @@ def fetch_chatbot_response():
     return Response(latest_chatbot_response, mimetype='text/plain')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
+
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://revuc-2025.github.io",
+            "http://localhost:8000"  # For local testing
+        ]
+    }
+})
