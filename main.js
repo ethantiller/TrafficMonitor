@@ -99,6 +99,8 @@ function initMap() {
                     lng: position.coords.longitude
                 };
 
+                getWeatherForecast(userLocation.lat, userLocation.lng)
+
                 // Update the map center and add a marker at user's location
                 map.setCenter(userLocation);
                 new google.maps.Marker({
@@ -144,3 +146,45 @@ async function calculateTravelTime(origin, destination, map) {
 
     }
 }
+
+
+
+
+async function getWeatherForecast(lat, lon) {
+    const apiUrl = `https://api.weather.gov/points/${lat},${lon}`;
+
+    try {
+        // Fetch the initial data to get the forecast URL
+
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+
+        const data = await response.json();
+
+        const forecastUrl = data.properties.forecast;
+        console.log(`Forecast URL: ${forecastUrl}`);
+
+        // Fetch the forecast data
+
+        // const response = await fetch(file); // Waits until the fetch is complete
+        // const data = await response.json();
+
+        const forecastResponse = await fetch(forecastUrl);
+       
+        
+        const forecastData = await forecastResponse.json();
+
+        const forecast = forecastData.properties.periods[0];
+        console.log(`Forecast: ${forecast.detailedForecast}`);
+
+        // Display the forecast on the webpage
+        document.getElementById('forecast').innerText = `Forecast: ${forecast.detailedForecast}`;
+    } catch (error) {
+        console.error(`Error: ${error.message}`);
+        document.getElementById('forecast').innerText = `Error: ${error.message}`;
+    }
+}
+

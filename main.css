@@ -88,7 +88,6 @@
 }
 
 .input1{
-<<<<<<< HEAD
   height: 40px;/* Add these to your existing CSS */
 .ai-section {
   padding: 1.5rem;
@@ -212,30 +211,4 @@
     padding: 1rem;
   }
 }
-=======
-  height: 40px;
-}
-
-.weather{
-  padding: 3px;
-  height: 16vh;
-  border-radius: 30px;
-  background-color: #AED6F1;
-
-
-
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
-
-}
-
-.text{
-  padding-bottom: 20px;
-}
-
-.filler{
-  height: 3px;
-  background-color: #2c3e50;
->>>>>>> 1e05f74bda9836b6d9e48ca9ab41223bc3c4f780
 }
