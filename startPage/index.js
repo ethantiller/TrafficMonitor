@@ -1,72 +1,100 @@
+ import { createAuth0Client } from '@auth0/auth0-spa-js';
+//import { createAuth0Client } from './node_modules/@auth0/auth0-spa-js/dist/auth0-spa-js.production.js';
 
-*{
-  margin: 0;
-  font-family: Comic Sans MS; /* changed Font */
-} 
+// const test = document.getElementById("test");
+// test.addEventListener("click", () => {
+//   alert("hi")
+// });
 
 
-.splitscreen{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+
+
+
+
+const auth0Client = await createAuth0Client({
+  domain: "dev-conofbnv2yt8x5si.us.auth0.com",
+  clientId: "Jo9UAn6KnrmD5w6WoLsOuksoFznJ0wgT",  // From 0auth?
+  authorizationParams: {
+    redirect_uri: "http://127.0.0.1:5500/startPage/main.html"
+  }
+});
+
+
+// async function loginButton(){
+
+//   await auth0Client.loginWithRedirect();
+// };
+
+const loginButton = document.getElementById("loginButton");
+loginButton.addEventListener("click", async () => {
+  alert("hi");
+  await auth0Client.loginWithRedirect();
+});
+
+
+if (window.location.search.includes("code=") || window.location.search.includes("error=")) {
+  await auth0Client.handleRedirectCallback();
+  window.history.replaceState({}, document.title, "/");
 }
 
 
-.sleft{
-  grid-column: 1;
-}
-
-.sright{
-  grid-column: 2;
-}
-
-.header{
-  color: black;
-  display: grid;
-  place-items: center;
-  background-color: #a8dadc;
-  height: 8vh;
+const isAuthenticated = await auth0Client.isAuthenticated();
+if (isAuthenticated) {
+  const user = await auth0Client.getUser();
+  console.log(user);
 }
 
 
-.navbar{
-  background-color: #2c3e50;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  place-items: center;
-  height: 7vh;
-}
+const logoutButton = document.getElementById("logoutButton");
+logoutButton.addEventListener("click", () => {
+  auth0Client.logout({ returnTo: "http://127.0.0.1:5500/startPage/index.html" });
+});
 
 
 
-.signUp{
-  grid-column: 5;
-  display: grid;
-  place-items: center;
-  background-color: #E6F7FF;
-  height: 7vh;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-}
+
+///ETHAN"S CODE BELOW
 
 
 
-.main{
 
+// auth0.createAuth0Client({
+//   domain: "dev-6af1rhk16075mjiz.us.auth0.com",
+//   clientId: "ETEkszSpLvx32uEbCXy6ENPev09ekB3z",
+//   authorizationParams: {
+//     redirect_uri: "https://ethantiller.github.io/Stock-O-Clock/mainpage.html"
+//   }
+// }).then(async (auth0Client) => {
+//   // Assumes a button with id "getstartedBtn" in the DOM
+//   const loginButton = document.getElementById("getstartedBtn");
 
-  background-image: url("/images/TrafficBlur.jpg"); /* Replace with your image file's name */
-  
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image */  
+//   loginButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     auth0Client.loginWithRedirect();
+//   });
 
+//   if (location.search.includes("state=") && 
+//       (location.search.includes("code=") || 
+//       location.search.includes("error="))) {
+//     await auth0Client.handleRedirectCallback();
+//     window.history.replaceState({}, document.title, "/");
+//   }
 
+//   // Assumes a button with id "logout" in the DOM
+//   const logoutButton = document.getElementById("logout");
 
-  text-align: center;
-  /* background-color: #AED6F1; */
-  /* background-color: #2c3e50; */
-  /* background-color: #F0FFFF; */
-  height: 75vh;
-}
+//   logoutButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     auth0Client.logout();
+//   });
+
+// console.log("Right here")
+//   const isAuthenticated = await auth0Client.isAuthenticated();
+//   const userProfile = await auth0Client.getUser();
+
+//   // Assumes an element with id "profile" in the DOM
+ 
+
+// });
