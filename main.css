@@ -1,241 +1,178 @@
-
-*{
+/* General Styles */
+* {
   margin: 0;
- 
-  
-} 
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
-.splitscreen{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Navbar */
+.navbar {
   background-color: #2c3e50;
-  height: 75vh;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-
-.sleft{
-  grid-column: 1;
-  padding: 3px;
-}
-
-.sright{
-  grid-column: 2;
-  padding: 3px;
-}
-
-.header{
-  color: black;
-  display: grid;
-  place-items: center;
-  background-color: #a8dadc;
-  height: 8vh;
-}
-
-
-.navbar{
-  background-color: #2c3e50;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  place-items: center;
-  height: 7vh;
-}
-
-
-
-.signUp{
-  grid-column: 5;
-  display: grid;
-  place-items: center;
+.signUp {
   background-color: #E6F7FF;
-  height: 7vh;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-.mainright{
-
-  border-radius: 30px;
-  background-color: #AED6F1; 
-  text-align: center;
-  height: 75vh;
+.signUp a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
 }
 
-.background{
-  padding: 3px;
+/* Splitscreen Layout */
+.splitscreen {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  
-  background-color: #2c3e50;
-  height: 17vh;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 60px); /* Adjust based on navbar height */
 }
 
-.mainleft{
-
-  border-radius: 30px;
-  background-color: #AED6F1; 
-
-
-
-  text-align: center;
-  /* background-color: #AED6F1; */
-  /* background-color: #2c3e50; */
-  /* background-color: #F0FFFF; */
-  height: 75vh;
-}
-
-.input1{
-<<<<<<< HEAD
-  height: 40px;/* Add these to your existing CSS */
-.ai-section {
-  padding: 1.5rem;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-#aiForm {
+.sleft, .sright {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
-#aiForm label {
-  font-size: 1.1rem;
-  color: #2c3e50;
-  font-weight: 500;
-}
-
-#aiForm input[type="text"] {
+/* Map Container */
+.map-container {
+  border-radius: 30px;
+  height: 75vh;
   width: 100%;
-  padding: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Directions Form */
+.directions-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.directions-form input {
+  flex: 1;
+  padding: 10px;
   border: 2px solid #a8dadc;
   border-radius: 8px;
   font-size: 1rem;
-  transition: all 0.3s ease;
 }
 
-#aiForm input[type="text"]:focus {
-  outline: none;
-  border-color: #457b9d;
-  box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.1);
-}
-
-#aiForm button {
+.directions-form button {
+  padding: 10px 20px;
   background-color: #457b9d;
   color: white;
-  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-#aiForm button:hover {
-  background-color: #2c3e50;
-  transform: translateY(-1px);
+.directions-form button:hover {
+  background-color: #365f7a;
 }
 
-#response {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: white;
+.directions-panel {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
   border-radius: 8px;
-  min-height: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Update existing input styles */
-.input1 {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+/* AI Section */
+.ai-section {
+  margin-top: 20px;
 }
 
-.input1 input[type="text"] {
-  width: 100%;
-  padding: 0.8rem;
+.ai-form .form-group {
+  margin-bottom: 15px;
+}
+
+.ai-form label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.modern-input {
+  flex: 1;
+  padding: 10px;
   border: 2px solid #a8dadc;
   border-radius: 8px;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.input1 button {
+.modern-input:focus {
+  outline: none;
+  border-color: #457b9d;
+}
+
+.modern-button {
+  padding: 10px 20px;
   background-color: #457b9d;
   color: white;
-  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.input1 button:hover {
-  background-color: #2c3e50;
+.modern-button:hover {
+  background-color: #365f7a;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.response-container {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .splitscreen {
-    grid-template-columns: 1fr;
-    height: auto;
+      grid-template-columns: 1fr;
+      height: auto;
   }
 
-  .sleft, .sright {
-    grid-column: auto;
-    padding: 0;
+  .map-container {
+      height: 50vh;
   }
 
-  .mainleft, .mainright {
-    height: auto;
-    min-height: 50vh;
-    margin: 1rem;
+  .directions-form {
+      flex-direction: column;
   }
 
-  .ai-section, .input1 {
-    padding: 1rem;
+  .directions-form button {
+      width: 100%;
   }
-}
-
-@media (max-width: 480px) {
-  #aiForm button, .input1 button {
-    width: 100%;
-    padding: 1rem;
-  }
-}
-=======
-  height: 40px;
-}
-
-.weather{
-  padding: 3px;
-  height: 16vh;
-  border-radius: 30px;
-  background-color: aqua;
-
-
-
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
-
-}
-
-.text{
-  padding-bottom: 20px;
-}
-
-.filler{
-  height: 3px;
-  background-color: #2c3e50;
->>>>>>> 1e05f74bda9836b6d9e48ca9ab41223bc3c4f780
 }

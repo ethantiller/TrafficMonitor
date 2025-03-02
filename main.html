@@ -4,81 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-
-    <script src="main.js"> </script>
+    <script src="main.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZmKNiPGUqEQxs3uovyiHUbTjzEKfRjKA&callback=initMap" defer></script>
     <title>Main Page</title>
 </head>
 <body>
-
     <div class="navbar">
-        
-            <div class='signUp'>
-              
-                    <!-- Replace URLs with your actual file paths or websites -->
-                    <a class="sleft"href="index.html">link to index</a>
-                
-            </div>
-        
+        <div class="signUp">
+            <a class="sleft" href="index.html">Link to Index</a>
+        </div>
     </div>
 
-
-<!--  -->
-
     <div class="splitscreen">
-        <div class="sleft"> <!-- Left side of screen  -->
-
-            <div class='mainleft'>
-               
-                
-<!-- GOOGLE MAPS GOES HHHHHHEEEEEEEEEEERRRRRRREEEEEEE -->
-
-                <div id="map" style="border-radius: 30px; height: 75vh; width: 100%;"></div>
-
-
-            
+        <!-- Left Side (Map) -->
+        <div class="sleft">
+            <div class="mainleft">
+                <div id="map" class="map-container"></div>
             </div>
         </div>
-        <div class="sright"> <!-- Left side of screen  -->
-            
-        
-            <div class='mainright'>
-                <form class="input1"> 
+
+        <!-- Right Side (Form and Directions) -->
+        <div class="sright">
+            <div class="mainright">
+                <!-- Directions Form -->
+                <form class="directions-form">
                     <input type="text" placeholder="Enter destination address" required>
                     <button type="submit">Get Directions</button>
                 </form>
-                <div id="directions-panel"></div>
+                <div id="directions-panel" class="directions-panel"></div>
+
+                <!-- AI Assistant Form -->
                 <section class="ai-section">
-                    <form id="aiForm">
-                        <label for="prompt">Enter your prompt:</label>
-                        <input type="text" id="prompt" name="prompt" required>
-                        <button type="submit">Submit</button>
+                    <form id="aiForm" class="ai-form">
+                        <div class="form-group">
+                            <label for="prompt">Travel Assistant</label>
+                            <div class="input-group">
+                                <input type="text" id="prompt" class="modern-input" placeholder="Ask me anything about your trip..." required>
+                                <button type="submit" class="modern-button ai-button">
+                                    <svg class="icon" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                                </button>
+                            </div>
+                        </div>
                     </form>
-                    <div id="response"></div>
+                    <div id="response" class="response-container"></div>
                 </section>
             </div>
-            
-            
-        
         </div>
     </div>
-<<<<<<< HEAD
-=======
-    
-    <div class="filler">
-
-    </div>
-
-    <div class="background">
-        <div class="weather">
-            <h1 >Weather Forecast</h1>
-            <h2 class="text" id="forecast"></h2>
-
-        </div>
-        
-    </div>
->>>>>>> 1e05f74bda9836b6d9e48ca9ab41223bc3c4f780
-
 </body>
 </html>
-
