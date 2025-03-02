@@ -8,8 +8,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   const loginButton = document.getElementById('loginButton');
+  
 
   loginButton.addEventListener('click', async () => {
+      try {
+          await auth0.loginWithRedirect();
+      } catch (error) {
+          console.error('Error logging in:', error);
+      }
+  });
+
+  const signinButton = document.getElementById('signinButton');
+  
+
+  signinButton.addEventListener('click', async () => {
       try {
           await auth0.loginWithRedirect();
       } catch (error) {

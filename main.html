@@ -4,36 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZmKNiPGUqEQxs3uovyiHUbTjzEKfRjKA&callback=initMap" defer></script>
     <title>Main Page</title>
 </head>
 <body>
-    <div class="splitscreen">
-        <div class="sleft">
-            <!-- map -->
-        </div>
-        <div class="sright">
-            <!-- everything else -->
-            <header>
-                <h2 class='header'>Welcome to our Website!</h2>
-            </header>
-            <nav>
-                <div class="navbar">
-                    <div class='signUp'>
-                        <p class="sleft">sign Up</p>
-                        <p class="sright">login</p>
-                    </div>
+
+   
+    <div class="split">
+
+        
+        <div class="navbar">
+
+            <h3 id="forecast" class="weather">Updating Forecast...</h3>
+        
+            <div class="signUpright">
+                <div class="signUp">
+                    <a class="sleft" href="index.html">Index Page</a>
                 </div>
-            </nav>
-            <div class='main'>
-                <!-- <p>main</p> -->
-            </div>
-            <footer>Hi, I am a humble footer, trying to not fall in the void below, don't know how to get rid of it</footer>
-            <h1>Hello!!!!</h1>
-            <p>Login:</p>
-            <ul>
-                <!-- Replace URLs with your actual file paths or websites -->
-                <li><a href="index.html">link to index</a></li>
-            </ul>
+           </div>
+        </div>
+
+    </div>
+
+
+    <div class="splitscreen">
+        <!-- Left Side (Map) -->
+        <div class="sleft">
+            
+            <div id="map" class="map-container"></div>
+            <div id="travelInfo" class="travelSpcing"></div>
+
+        
+        </div>
+
+        <!-- Right Side (Form and Directions) -->
+        <div class="sright">
+        
+            <!-- Directions Form -->
+            <!-- Directions Form -->
+            <form class="directions-form">
+                <!-- Input Field with Old Template -->
+                <div class="input-group">
+                    <label for="destination" class="input-group__label">Destination</label>
+                    <input type="text" id="destination" class="input-group__input" placeholder="Enter destination address" required>
+                </div>
+            
+                <!-- Button with Animated Styles -->
+                <button type="submit" id="submit-directions" class="animated-button">
+                    <span class="text">Get Directions</span>
+                    <svg class="arr-1" viewBox="0 0 24 24">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                    <svg class="arr-2" viewBox="0 0 24 24">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                    <span class="circle"></span>
+                </button>
+            </form>
+            <div id="directions-panel" class="directions-panel"></div>
+
+            <!-- AI Assistant Form -->
+            <section class="ai-section">
+                <form id="aiForm" class="ai-form">
+                    <div class="form-group">
+                        <label for="prompt">Travel Assistant</label>
+                        <div class="input-group">
+                            <input type="text" id="prompt" class="modern-input" placeholder="Ask me anything about your trip..." required>
+                            <button type="submit" class="modern-button ai-button">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div id="response" class="response-container"></div>
+            </section>
+        
         </div>
     </div>
 </body>
