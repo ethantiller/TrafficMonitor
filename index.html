@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.20/auth0-spa-js.production.js"></script>
     <script type="module" src="index.js"></script>
     <title>Index Page</title>
 </head>
 <body>
-    <nav>
-        <div class="navbar">
-            <h2 class="signUp">Sign Up</h2>
+    <header class="top-banner">
+        <nav class="navbar">
+            <img class="logo" src="images/trafficlogo.png" alt="Company Logo">
+            <div class="nav-links">
+                <a href="#" class="nav-link">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <!-- In your HTML, modify the hero section -->
+        <section class="hero">
+            <div class="masking-container">
+                <h1 class="masked-text">Welcome to Our Platform</h1>
+            </div>
+            <p>Discover amazing features and services</p>
+            <button class="button-64" role="button"><span class="text">Get Started</span></button>
+        </section>
+        <div class="about-content">
+            <section class="about-section">
+                <button class="about-button" role="button"><span class="text">About Us</span></button>
+            </section>
         </div>
-    </nav>
-    <div class='main'>
-        <!-- <p>main</p> -->
-    </div>
-    <button id="loginButton">Click me for an alert</button>
-    <h1 class="about">About</h1>
-    <p>hello</p>
+    </main>
+
 </body>
 </html>
