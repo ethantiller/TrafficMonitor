@@ -5,6 +5,7 @@ from AIChatbot import ChatBotAPI
 
 app = Flask(__name__)
 
+
 # Store the chatbot response
 chatbot_response_storage = {}
 latest_chatbot_response = None
@@ -43,4 +44,4 @@ def fetch_chatbot_response():
     return jsonify({"chatbot_response": latest_chatbot_response})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
