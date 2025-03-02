@@ -23,13 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             // Send a POST request to the endpoint
-            const response = await fetch('http://127.0.0.1:5000/userresponse', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
+            // Add mode and credentials options to fetch
+        const response = await fetch('http://127.0.0.1:5000/userresponse', {
+            method: 'POST',
+            mode: 'cors', // Ensure CORS mode
+            credentials: 'same-origin', // Or 'include' if needed
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -40,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('response').innerText = result; // Display the plain text response
         } catch (error) {
             console.error('Error:', error);
-            document.getElementById('response').innerText = 'Error: ' + error.message;
         }
     });
 
