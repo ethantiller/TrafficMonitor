@@ -20,5 +20,5 @@ For the **2025 RevUC Hackathon**, we developed a **traffic and weather monitorin
 
 ## **How to Use**  
 1. **Clone the repository**
-2. **Install Requirements with pip install -r requirements.txt"**
+2. **Install Requirements**
 
