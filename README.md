@@ -1,1 +1,3 @@
-# Repo for Traffic Monitoring Project
+# Welcome to Legit Company® 2025 RevUC Hackathon 
+
+
