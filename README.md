@@ -13,8 +13,8 @@ For the **2025 RevUC Hackathon**, we developed a **traffic monitoring website** 
 - ⚡ **Dynamic Development** – Implementing real-time updates and a responsive UI.  
 
 ## **Technologies Used**  
-- **Frontend:** HTML, CSS, JavaScript (React/Next.js) *(if applicable)*  
-- **Backend:** Node.js, Flask, or FastAPI *(if applicable)*  
+- **Frontend:** HTML, CSS, JavaScript 
+- **Backend:** Python
 - **AI:** Google Gemini API  
 - **Authentication:** OAuth 2.0  
 - **Deployment:** AWS, Vercel, or Firebase *(if applicable)*  
