@@ -4,7 +4,7 @@
     "dotenv": "^16.4.7"
   },
   "scripts": {
-    "build": "node build.js && cp -r public/* dist/"
+    "build": "node build.js && mkdir -p dist && cp *.html *.js *.css dist/"
   }
 }
 
