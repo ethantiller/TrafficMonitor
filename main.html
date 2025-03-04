@@ -9,48 +9,27 @@
     <title>Main Page</title>
 </head>
 <body>
-
-   
     <div class="split">
-
-        
         <div class="navbar">
-
             <h3 id="forecast" class="weather">Updating Forecast...</h3>
-        
             <div class="signUpright">
                 <div class="signUp">
                     <a class="sleft" href="index.html">Index Page</a>
                 </div>
            </div>
         </div>
-
     </div>
-
-
     <div class="splitscreen">
-        <!-- Left Side (Map) -->
         <div class="sleft">
-            
             <div id="map" class="map-container"></div>
             <div id="travelInfo" class="travelSpcing"></div>
-
-        
         </div>
-
-        <!-- Right Side (Form and Directions) -->
         <div class="sright">
-        
-            <!-- Directions Form -->
-            <!-- Directions Form -->
             <form class="directions-form">
-                <!-- Input Field with Old Template -->
                 <div class="input-group">
                     <label for="destination" class="input-group__label">Destination</label>
                     <input type="text" id="destination" class="input-group__input" placeholder="Enter destination address" required>
                 </div>
-            
-                <!-- Button with Animated Styles -->
                 <button type="submit" id="submit-directions" class="animated-button">
                     <span class="text">Get Directions</span>
                     <svg class="arr-1" viewBox="0 0 24 24">
@@ -63,8 +42,6 @@
                 </button>
             </form>
             <div id="directions-panel" class="directions-panel"></div>
-
-            <!-- AI Assistant Form -->
             <section class="ai-section">
                 <form id="aiForm" class="ai-form">
                     <div class="form-group">
@@ -79,7 +56,6 @@
                 </form>
                 <div id="response" class="response-container"></div>
             </section>
-        
         </div>
     </div>
 </body>
