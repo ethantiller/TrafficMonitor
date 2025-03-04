@@ -24,9 +24,9 @@ const envVars = {
 };
 
 // Replace placeholders in HTML and JS files
-replacePlaceholders(path.join(__dirname, 'public', 'index.html'), envVars);
-replacePlaceholders(path.join(__dirname, 'public', 'main.html'), envVars);
-replacePlaceholders(path.join(__dirname, 'public', 'index.js'), envVars);
-replacePlaceholders(path.join(__dirname, 'public', 'main.js'), envVars);
+replacePlaceholders(path.join(__dirname, 'index.html'), envVars);
+replacePlaceholders(path.join(__dirname, 'main.html'), envVars);
+replacePlaceholders(path.join(__dirname, 'index.js'), envVars);
+replacePlaceholders(path.join(__dirname, 'main.js'), envVars);
 
 console.log('Environment variables injected successfully!');
