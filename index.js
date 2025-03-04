@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const auth0 = new Auth0Client({
-        domain: 'dev-conofbnv2yt8x5si.us.auth0.com',
-        client_id: 'Jo9UAn6KnrmD5w6WoLsOuksoFznJ0wgT',
-        redirect_uri: 'https://github.com/RevUC-2025/TrafficMonitor/main.html'
+        domain: '{{AUTH0_DOMAIN}}',
+        client_id: '{{AUTH0_CLIENT_ID}}',
+        redirect_uri: '{{AUTH0_REDIRECT_URI}}'
     });
   
     const loginButton = document.getElementById('loginButton');
