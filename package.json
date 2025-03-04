@@ -2,5 +2,10 @@
   "dependencies": {
     "@google/generative-ai": "^0.22.0",
     "dotenv": "^16.4.7"
+  },
+  "scripts": {
+    "build": "node build.js && cp -r public/* dist/"
   }
 }
+
+
