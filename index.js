@@ -1,7 +1,7 @@
 // Environment variables will be injected here by the build script
 const AUTH0_DOMAIN = "dev-h2kl7dklje1ovh16.us.auth0.com";
 const AUTH0_CLIENT_ID = "IZD9ObtBRNHd1IXlJY3avZqTkpB3Fs4r";
-const AUTH0_REDIRECT_URI = "https://ethantiller.github.io/TrafficMonitor/main.html";
+const AUTH0_REDIRECT_URI = "https://ethantiller.github.io/TrafficMonitorOld/main.html";
 
 document.addEventListener('DOMContentLoaded', (event) => {
     // Initialize Auth0 with environment variables
